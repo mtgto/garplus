@@ -1,0 +1,24 @@
+{
+  "name": "garplus",
+  "version": "0.0.1",
+  "description": "ガルーンをちょっと使いやすくするツール",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/chrome": "0.0.35"
+  },
+  "scripts": {
+    "build:script": "tsc scripts/main.ts --outFile dist/scripts/main.js",
+    "build:manifest": "node manifest-template.js > dist/manifest.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mtgto/garplus.git"
+  },
+  "author": "mtgto",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/mtgto/garplus/issues"
+  },
+  "homepage": "https://github.com/mtgto/garplus#readme"
+}
