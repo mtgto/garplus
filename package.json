@@ -7,7 +7,7 @@
     "@types/chrome": "0.0.35"
   },
   "scripts": {
-    "build:script": "tsc scripts/main.ts --outFile dist/scripts/main.js",
+    "build:script": "tsc --removeComments scripts/main.ts --outFile dist/scripts/main.js",
     "build:manifest": "node manifest-template.js > dist/manifest.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
