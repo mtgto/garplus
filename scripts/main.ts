@@ -28,7 +28,7 @@ Array.prototype.forEach.call(document.querySelectorAll("div.normalEventElement>d
         privateSchedules.push(privateSchedule);
     }
 });
-chrome.extension.onRequest.addListener(function(request, sender, sendResponse) {
+chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     if (request["menu"] === consts.CONTEXT_MENU_SHOW_MASKED_SCHEDULE) {
         for (let privateSchedule of privateSchedules) {
             privateSchedule.textContent = privateSchedule["_maskedText"];

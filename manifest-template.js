@@ -25,7 +25,8 @@ manifest = {
 		"js": ["scripts/main.js"]
 	}],
 	"background": {
-		"scripts": ["scripts/background.js"]
+		"scripts": ["scripts/background.js"],
+		"persistent": false
 	}
 }
 console.log(JSON.stringify(manifest))

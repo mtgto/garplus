@@ -8,7 +8,8 @@
     "webpack": "^1.13.3"
   },
   "scripts": {
-    "build": "npm run build:typescript && npm run build:webpack && npm run build:manifest",
+    "build": "npm run build:preprocess && npm run build:typescript && npm run build:webpack && npm run build:manifest",
+    "build:preprocess": "node scripts/consts-template.js > scripts/consts.ts",
     "build:typescript": "tsc --removeComments scripts/*.ts",
     "build:webpack": "./node_modules/.bin/webpack --optimize-minimize",
     "build:manifest": "node manifest-template.js > dist/manifest.json",
