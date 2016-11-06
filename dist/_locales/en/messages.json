@@ -1,0 +1,7 @@
+{
+    "extensionName": { "message": "Garplus" },
+    "extensionDescription": { "message": "A convenient tool for garoon."},
+    "contextMenuTitleShow": { "message": "Show a titles of hidden schedules"},
+    "contextMenuTitleHide": { "message": "Hide a titles of hidden schedules"},
+    "stringHiddenTitle": { "message": "Hidden"}
+}

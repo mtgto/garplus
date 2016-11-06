@@ -5,9 +5,10 @@ if (!base_url) {
 }
 manifest = {
 	"manifest_version": 2,
-	"name": "ガルプラス",
+	"name": "__MSG_extensionName__",
 	"version": "0.0.1",
-	"description": "ガルーンをちょっと使いやすくするツール",
+	"description": "__MSG_extensionDescription__",
+	"default_locale": "en",
 	"author": "mtgto",
 	"homepage_url": "https://github.com/mtgto/garplus",
 	"icons": {

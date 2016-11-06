@@ -1,0 +1,7 @@
+{
+    "extensionName": { "message": "ガルプラス" },
+    "extensionDescription": { "message": "ガルーンをちょっと使いやすくするツール"},
+    "contextMenuTitleShow": { "message": "非公開予定のタイトルを表示する"},
+    "contextMenuTitleHide": { "message": "非公開予定のタイトルを非表示にする"},
+    "stringHiddenTitle": { "message": "非公開"}
+}

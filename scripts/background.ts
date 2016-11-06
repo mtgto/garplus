@@ -4,7 +4,7 @@ import consts = require("./consts");
 chrome.runtime.onInstalled.addListener(function() {
     chrome.contextMenus.create({
         "id": consts.CONTEXT_MENU_SHOW_MASKED_SCHEDULE,
-        "title": "非公開予定のタイトルを表示する",
+        "title": chrome.i18n.getMessage("contextMenuTitleShow"),
         "documentUrlPatterns": [consts.GAROON_BASE_URL + "*"]
     });
     chrome.contextMenus.onClicked.addListener(function (info: chrome.contextMenus.OnClickData, tab: chrome.tabs.Tab) {

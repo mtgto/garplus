@@ -24,12 +24,12 @@ Array.prototype.forEach.call(document.querySelectorAll("div.normalEventElement>d
     if (img.src.indexOf("privateMark") !== -1) {
         var privateSchedule: Text = <Text>img.previousSibling;
         privateSchedule["_maskedText"] = privateSchedule.textContent;
-        privateSchedule.textContent = "非公開";
+        privateSchedule.textContent = chrome.i18n.getMessage("stringHiddenTitle");
         privateSchedules.push(privateSchedule);
     }
 });
-chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
-    if (request["menu"] === consts.CONTEXT_MENU_SHOW_MASKED_SCHEDULE) {
+chrome.runtime.onMessage.addListener(function(message, sender: chrome.runtime.MessageSender, sendResponse) {
+    if (message["menu"] === consts.CONTEXT_MENU_SHOW_MASKED_SCHEDULE) {
         for (let privateSchedule of privateSchedules) {
             privateSchedule.textContent = privateSchedule["_maskedText"];
         }
