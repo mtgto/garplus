@@ -17,11 +17,15 @@ manifest = {
 	},
 
 	"permissions": [
-		"activeTab"
+		"activeTab",
+		"contextMenus"
 	],
 	"content_scripts": [{
 		"matches": [process.env.GAROON_BASE_URL + "*"],
 		"js": ["scripts/main.js"]
-	}]
+	}],
+	"background": {
+		"scripts": ["scripts/background.js"]
+	}
 }
 console.log(JSON.stringify(manifest))
