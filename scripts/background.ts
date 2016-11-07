@@ -7,9 +7,9 @@ chrome.runtime.onInstalled.addListener(function() {
         "title": chrome.i18n.getMessage("contextMenuTitleShow"),
         "documentUrlPatterns": [consts.GAROON_BASE_URL + "*"]
     });
-    chrome.contextMenus.onClicked.addListener(function (info: chrome.contextMenus.OnClickData, tab: chrome.tabs.Tab) {
-        if (info.menuItemId === consts.CONTEXT_MENU_SHOW_MASKED_SCHEDULE) {
-            chrome.tabs.sendMessage(tab.id, { menu: consts.CONTEXT_MENU_SHOW_MASKED_SCHEDULE });
-        }
-    });
+});
+chrome.contextMenus.onClicked.addListener(function (info: chrome.contextMenus.OnClickData, tab: chrome.tabs.Tab) {
+    if (info.menuItemId === consts.CONTEXT_MENU_SHOW_MASKED_SCHEDULE) {
+        chrome.tabs.sendMessage(tab.id, { menu: consts.CONTEXT_MENU_SHOW_MASKED_SCHEDULE });
+    }
 });

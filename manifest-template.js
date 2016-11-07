@@ -6,7 +6,7 @@ if (!base_url) {
 manifest = {
 	"manifest_version": 2,
 	"name": "__MSG_extensionName__",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "__MSG_extensionDescription__",
 	"default_locale": "en",
 	"author": "mtgto",
