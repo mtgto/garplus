@@ -1,18 +1,22 @@
 {
   "name": "garplus",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "ガルーンをちょっと使いやすくするツール",
   "dependencies": {},
   "devDependencies": {
-    "@types/chrome": "0.0.35",
-    "webpack": "^1.13.3"
+    "@types/chrome": "0.0.69",
+    "awesome-typescript-loader": "^5.2.0",
+    "copy-webpack-plugin": "^4.5.2",
+    "tslint": "^5.11.0",
+    "typescript": "^2.9.2",
+    "uglifyjs-webpack-plugin": "^1.2.7",
+    "webpack": "^4.16.1",
+    "webpack-command": "^0.4.1"
   },
   "scripts": {
-    "build": "npm run build:preprocess && npm run build:typescript && npm run build:webpack && npm run build:manifest",
-    "build:preprocess": "node scripts/consts-template.js > scripts/consts.ts",
-    "build:typescript": "tsc --removeComments scripts/*.ts",
-    "build:webpack": "./node_modules/.bin/webpack --optimize-minimize",
-    "build:manifest": "node manifest-template.js > dist/manifest.json",
+    "build": "npm run build:dev",
+    "build:dev": "webpack --mode development",
+    "build:prod": "webpack --mode production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

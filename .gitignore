@@ -1,6 +1,5 @@
+.awcache/
 dist/scripts/
 dist/manifest.json
 node_modules/
 scripts/*.js
-!scripts/consts-template.js
-scripts/consts.ts

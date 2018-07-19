@@ -1,12 +1,7 @@
-var base_url = process.env.GAROON_BASE_URL;
-if (!base_url) {
-	console.error("環境変数 GAROON_BASE_URL に \"http://example.com/\" のような文字列を渡して下さい");
-	process.exit(1);
-}
-manifest = {
+{
 	"manifest_version": 2,
 	"name": "__MSG_extensionName__",
-	"version": "0.0.2",
+	"version": "PACKAGE_JSON_VERSION",
 	"description": "__MSG_extensionDescription__",
 	"default_locale": "en",
 	"author": "mtgto",
@@ -22,7 +17,7 @@ manifest = {
 		"contextMenus"
 	],
 	"content_scripts": [{
-		"matches": [process.env.GAROON_BASE_URL + "*"],
+		"matches": ["GAROON_BASE_URL*"],
 		"js": ["scripts/main.js"]
 	}],
 	"background": {
@@ -30,4 +25,3 @@ manifest = {
 		"persistent": false
 	}
 }
-console.log(JSON.stringify(manifest))
