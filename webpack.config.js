@@ -20,7 +20,7 @@ module.exports = {
             {
                 test: /\.ts$/,
                 include: `${__dirname}/scripts`,
-                use: ["awesome-typescript-loader"],
+                use: ["ts-loader"],
             },
         ],
     },
